@@ -1,0 +1,16 @@
+.card-category {
+  height: 165px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(238, 213, 198);
+  font-size: 20px;
+  text-shadow: 1px 1px 3px rgba(0,0.3,0.3,0.3);
+}
+
+.card-large {
+  height: 48vh;
+  max-height: 300px;
+}
