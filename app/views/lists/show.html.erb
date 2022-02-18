@@ -5,14 +5,25 @@
       <div class="list-group">
         <% @list.bookmarks.each do |bookmark| %>
           <li class="list-group-item">
-            <p><%= list.content %></p>
+            <p><%= bookmark.comment %></p>
       <div>
       </div>
           </li>
         <% end %>
         <%= link_to "delete this list", list_path(@list), method: :delete, class: "btn btn-cancel", data: { confirm: "Are you sure you want to delete this list?" } %>
+
+
         <%= link_to 'add movie', new_list_bookmark_path(@list) %>
       <%= link_to "See all lists", lists_path %>
+       <div class="bookmark-group">
+        <% @list.movies.each do |movie| %>
+          <li class="list-group-item">
+            <p><%= movie.title %></p>
+      <div>
+      </div>
+          </li>
+        <% end %>
+        <%= link_to "delete this movie", bookmark_path(@bookmark), method: :delete, class: "btn btn-cancel", data: { confirm: "Are you sure you want to delete this movie?" } %>
     </div>
   </div>
 </div>
