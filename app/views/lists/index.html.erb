@@ -1,12 +1,16 @@
-<h1>Lists</h1>
-
-<ul>
-  <% @lists.each do |list| %>
-    <li class="list-group-item">
-      <%= link_to list.name, list_path(list) %>
-    </li>
-  <% end %>
-</ul>
- <%= link_to "create a list", new_list_path, class: 'btn btn-primary' %>
-    </div>
+<div class="text-center text-white">
+    <h1>Save movies</h1>
+    <h3 class="typed-js" data-controller="typed-js"></h3>
+</div>
+<div class="container py-3">
+    <h3 class="mb-0">There are your Lists</h3>
+    <%= link_to "Create a list", new_list_path, class: "btn btn-primary" %>
   </div>
+  <div class="row">
+    <% @lists.each do |list| %>
+        <%= link_to list_path(list), class: "text-decoration-none" do %>
+            <%= list.name %>
+        <% end %>
+    <% end %>
+  </div>
+</div>
